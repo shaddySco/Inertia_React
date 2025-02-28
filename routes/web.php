@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
+/*
 Route::get('/welcome', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -13,6 +13,7 @@ Route::get('/welcome', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -28,7 +29,9 @@ require __DIR__.'/auth.php';
 Route::get('/home', function () {
     return Inertia::render('Profile/Home'); // Correct format
 });
+*/
 
-Route::get('/home', function(){
+Route::get('/', function(){
+sleep(2);
     return Inertia::render('Home', ['name' => 'Mike']);
 });
