@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -31,7 +32,6 @@ Route::get('/home', function () {
 });
 */
 
-Route::get('/', function(){
-sleep(2);
-    return Inertia::render('Home', ['name' => 'Mike']);
-});
+Route::get("/", [PostController::class,"index"]);
+
+Route::resource('posts', PostController::class)->except('index');
