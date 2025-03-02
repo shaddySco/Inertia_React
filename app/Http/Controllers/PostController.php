@@ -30,12 +30,16 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate(
+        sleep(2);
+
+        $fields = $request->validate(
             [
                 'body' => ['required']
             ]
             );
-        dd($request);
+
+            Post::create($fields);
+        return redirect('/');
     }
 
     /**

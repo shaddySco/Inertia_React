@@ -10,7 +10,12 @@ export default function Create(){
     function submit(e){
         e.preventDefault()
         post("/posts");
+    
     }
+
+    console.log(errors);
+
+
     return(
         <>
         <h1 className="title">Create a new Post </h1>
