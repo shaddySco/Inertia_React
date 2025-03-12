@@ -13,6 +13,7 @@ createInertiaApp({
     setup({ el, App, props }) {
         import("react-dom").then((ReactDOM) =>
             ReactDOM.createRoot(el).render(<App {...props} />)
-        );
+ 
+    );
     },
 });
